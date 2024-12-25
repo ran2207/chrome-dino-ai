@@ -1,4 +1,3 @@
-````
 # Chrome Dino Game AI Bot
 
 An AI-powered bot that learns to play the Chrome Dinosaur Game using reinforcement learning (Q-learning). This bot uses Selenium for browser automation and supports both visible and headless modes for faster training.
@@ -8,6 +7,7 @@ An AI-powered bot that learns to play the Chrome Dinosaur Game using reinforceme
 ## Overview
 
 This project includes multiple implementations of a bot to play the Chrome Dino Game:
+
 1. **Basic adaptive threshold learning**: Dynamically adjusts jump thresholds based on game speed and crash data.
 2. **Q-learning-based bot**: Learns obstacle patterns and improves decision-making over episodes.
 3. **Headless training**: Runs in headless mode for faster, automated training.
@@ -27,32 +27,41 @@ This project includes multiple implementations of a bot to play the Chrome Dino 
 ## File Descriptions
 
 ### **`dino_bot.py`**
+
 - A basic implementation that adjusts jump thresholds based on game speed and crash data.
 - Saves learning progress in a JSON file (`learning_data.json`).
 
 ### **`dino_bot_ml.py`**
+
 - Implements Q-learning for smarter obstacle handling.
 - Uses a pickle file (`learning_data.pkl`) for saving and loading learning data.
 - Runs in visible mode with full Q-learning logic.
 
 ### **`dino_bot_ml_headless.py`**
+
 - Enhanced version of `dino_bot_ml.py` that supports:
   - Headless Chrome for faster training.
   - Automatic retries if the game fails to load.
   - Game speed customization for faster progress.
 
 ### **`learning_data.pkl`**
+
 - A binary file used to store the Q-table and learning parameters for the Q-learning bots.
 
 ### **`requirements.txt`**
+
 - Contains the list of dependencies required to run the scripts.
 
+### **`README.md`**
+
+- Documentation explaining the project, file structure, setup instructions, and usage guidelines.
 
 ---
 
 ## Requirements
 
 ### Prerequisites
+
 1. **Python 3.8+**
 2. **Google Chrome** (latest version)
 3. **ChromeDriver**
@@ -61,26 +70,12 @@ This project includes multiple implementations of a bot to play the Chrome Dino 
    - Add ChromeDriver to your `PATH`.
 
 ### Install Dependencies
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/dino-ml-bot.git
    cd dino-ml-bot
-````
-
-2. Set up a virtual environment (optional but recommended):
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # For macOS/Linux
-   venv\Scripts\activate     # For Windows
    ```
-
-3. Install required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
----
 
 ## How to Run
 
